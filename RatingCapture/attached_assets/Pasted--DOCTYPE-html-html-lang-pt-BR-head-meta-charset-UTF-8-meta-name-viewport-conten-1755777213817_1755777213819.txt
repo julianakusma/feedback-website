@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Feedbacks da Empresa Fictícia</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div class="container">
+  <h1>Feedback da Empresa Fictícia</h1>
+
+  <section class="form-section">
+    <h2>Deixe seu feedback</h2>
+    <form id="form-feedback">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" required placeholder="Seu nome" />
+
+      <label for="nota">Nota (1 a 5):</label>
+      <select id="nota" required>
+        <option value="" disabled selected>Selecione uma nota</option>
+        <option value="1">1 - Muito ruim</option>
+        <option value="2">2 - Ruim</option>
+        <option value="3">3 - Regular</option>
+        <option value="4">4 - Bom</option>
+        <option value="5">5 - Excelente</option>
+      </select>
+
+      <label for="comentario">Comentário (opcional):</label>
+      <textarea id="comentario" rows="3" placeholder="Deixe seu comentário..."></textarea>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <section class="filter-section">
+    <h2>Filtrar feedbacks por nota</h2>
+    <div class="filter-checkboxes">
+      <label><input type="checkbox" class="filter-nota" value="1" checked /> 1</label>
+      <label><input type="checkbox" class="filter-nota" value="2" checked /> 2</label>
+      <label><input type="checkbox" class="filter-nota" value="3" checked /> 3</label>
+      <label><input type="checkbox" class="filter-nota" value="4" checked /> 4</label>
+      <label><input type="checkbox" class="filter-nota" value="5" checked /> 5</label>
+    </div>
+  </section>
+
+  <section class="list-section">
+    <h2>Feedbacks Recebidos</h2>
+    <ul id="lista-feedbacks" class="feedback-list"></ul>
+  </section>
+
+  <section class="chart-section">
+    <h2>Distribuição das Notas</h2>
+    <canvas id="graficoNotas"></canvas>
+  </section>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
